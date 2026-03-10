@@ -1,0 +1,78 @@
+/* Datei: assets/css/styles.css */
+
+.logo-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #198754;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Keep text normal (we are NOT switching writing direction) */
+body {
+  text-align: left;
+
+  /* Sticky footer setup */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let main grow so footer stays at the bottom even with little content */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer is naturally pushed down by the flex layout */
+footer {
+  flex-shrink: 0;
+}
+
+/* Anchor jumps should not hide under the header */
+section[id],
+h1[id],
+h2[id],
+h3[id],
+div[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Footer links */
+.footer-links a {
+  text-decoration: none;
+  color: #6c757d;
+  margin-inline-start: 12px;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  text-decoration: underline;
+}
+
+/* Layout switch: local menu left (default) / right (layout-right) */
+.layout-right #menuCol {
+  order: 2;
+}
+
+.layout-right #contentCol {
+  order: 1;
+}
+
+/* -------------------------
+   Sticky local menu behavior
+   -------------------------
+   - Desktop: menu "sticks" and follows scroll with spacing.
+   - Mobile: keep it normal (not sticky), because sticky sidebars on small screens are annoying.
+*/
+@media (min-width: 992px) {
+  #menuCol {
+    position: sticky;
+    top: 100px; /* spacing from top so it doesn't hide under header */
+    align-self: flex-start; /* important for sticky inside bootstrap row */
+    height: fit-content;
+  }
+}

@@ -1,0 +1,116 @@
+<!-- Datei: datenschutz.html -->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Datenschutz – CO2 Transparency</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body class="bg-light" data-page="datenschutz">
+    <div id="siteHeader"></div>
+
+    <main class="container my-4">
+      <div class="row g-4">
+        <!-- Local menu: local links -->
+        <aside id="menuCol" class="col-12 col-lg-3">
+          <div id="siteMenu"></div>
+        </aside>
+
+        <!-- Content -->
+        <section id="contentCol" class="col-12 col-lg-9">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h1 class="h5">Datenschutzerklaerung (Demo)</h1>
+              <p class="text-muted">
+                Diese Webseite ist ein Lernprojekt und dient ausschliesslich Demonstrationszwecken. Es werden keine Nutzerkonten gefuehrt
+                und keine personenbezogenen Daten aktiv an einen Server uebermittelt. Trotzdem ist es sinnvoll, transparent zu erklaeren,
+                welche Daten technisch im Browser verarbeitet oder gespeichert werden koennen.
+              </p>
+              <p class="text-muted">
+                Wichtig: Die CO2-Daten auf der Datenseite sind fiktiv. Die Filter- und Sortierfunktionen laufen komplett lokal im Browser,
+                damit die Funktionsweise nachvollziehbar bleibt und keine unnoetige Datenübertragung entsteht.
+              </p>
+
+              <h2 id="data" class="h6 mt-4">1. Datenverarbeitung</h2>
+              <p class="text-muted">
+                Beim Aufruf der Webseite werden die Inhalte statisch geladen. Die Eingaben in den Filterfeldern (Land, Unternehmen) werden ausschliesslich
+                im Browser verarbeitet, um die Tabelle zu filtern und die Trefferanzahl anzuzeigen. Es gibt keinen Login, kein Formular-Submit
+                und keine Datenbankanbindung.
+              </p>
+              <p class="text-muted">
+                Zur Benutzerfreundlichkeit speichert die Anwendung eine kleine Layout-Einstellung, damit sich das Menue nicht bei jedem Seitenwechsel
+                wieder zuruecksetzt.
+              </p>
+              <ul class="text-muted">
+                <li>
+                  <strong>localStorage:</strong> Speichert die Menue-Position (links oder rechts), damit sich das Layout nicht
+                  bei jedem Seitenwechsel zuruecksetzt.
+                </li>
+                <li>
+                  <strong>Filtereingaben:</strong> Werden nur lokal im Browser genutzt, um die Tabelle zu filtern und zu sortieren.
+                  Es findet keine Server-Uebertragung dieser Eingaben statt.
+                </li>
+              </ul>
+              <p class="text-muted">
+                Wenn der Browser-Cache oder localStorage geloescht wird, gehen diese Einstellungen verloren. Das ist gewollt, da die Anwendung
+                keine dauerhafte Datenspeicherung benoetigt.
+              </p>
+
+              <h2 id="cookies" class="h6 mt-4">2. Cookies / Tracking</h2>
+              <p class="text-muted">
+                Diese Demo nutzt keine Tracking-Cookies und kein Analyse-Tracking. Es werden keine Nutzerprofile erstellt und keine Tracking-IDs gesetzt.
+                Die Navigation und Filterfunktionalitaet funktioniert ohne Cookies.
+              </p>
+              <p class="text-muted">
+                Hinweis: Der Browser kann technisch eigene Cookies aus anderen Webseiten gespeichert haben. Diese stehen nicht im Zusammenhang mit dieser Demo
+                und werden von der Anwendung nicht ausgelesen oder ausgewertet.
+              </p>
+
+              <h2 id="cdn" class="h6 mt-4">3. Drittanbieter (CDN)</h2>
+              <p class="text-muted">
+                Bootstrap wird ueber ein Content Delivery Network (CDN) eingebunden. Das bedeutet: Dein Browser laedt CSS/JS-Dateien direkt vom CDN-Anbieter,
+                um das Layout und die Komponenten bereitzustellen. Dadurch kann der CDN-Anbieter technisch z. B. die IP-Adresse sehen,
+                weil jede Datei-Anfrage über eine Netzwerkverbindung erfolgt.
+              </p>
+              <p class="text-muted">
+                Alternative: Man kann Bootstrap auch lokal im Projektordner hosten. Das wuerde externe Requests reduzieren, ist aber fuer eine Demo nicht zwingend.
+              </p>
+
+              <h2 id="security" class="h6 mt-4">4. Sicherheit</h2>
+              <p class="text-muted">
+                Eingaben werden so verarbeitet, dass kein injizierter Code ausgefuehrt wird. Die Tabelle wird ueber sichere DOM-Methoden aufgebaut
+                (z. B. <code>createElement</code>) und Inhalte werden als Text ausgegeben (<code>textContent</code> statt <code>innerHTML</code>).
+                Damit wird verhindert, dass Nutzereingaben als HTML interpretiert werden.
+              </p>
+              <p class="text-muted mb-0">
+                Zusaetzlich werden Filtereingaben vereinfacht/bereinigt (z. B. durch Längenbegrenzung und Reduktion ungewoehnlicher Zeichen),
+                um unnoetig riskante Zeichenfolgen weiter zu entschärfen. Entscheidend bleibt jedoch die sichere Ausgabe via <code>textContent</code>.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Scripts -->
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/layout.js"></script>
+  </body>
+</html>
