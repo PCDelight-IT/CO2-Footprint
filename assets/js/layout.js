@@ -35,7 +35,6 @@ function renderLocalNav() {
     index: [
       { href: "#filtersSection", label: "Filter" },
       { href: "#tableSection", label: "Tabelle" },
-      { href: "#methodSection", label: "Methode" },
     ],
 
     info: [
